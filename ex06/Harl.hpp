@@ -1,3 +1,6 @@
+#ifndef HARL_HPP
+#define HARL_HPP
+
 #include <iostream>
 
 class Harl
@@ -7,11 +10,14 @@ class Harl
 		void	info(void);
 		void	warning(void);
 		void	error(void);
+
 	public:
 		Harl();
 		Harl(const Harl &other);
 		Harl &operator=(const Harl &other);
 		~Harl();
 
-		void	complaint(std::string level);
+		void	complaint(const std::string &level);
 };
+
+#endif
