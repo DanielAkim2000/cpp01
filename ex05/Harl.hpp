@@ -13,5 +13,5 @@ class Harl
 		Harl &operator=(const Harl &other);
 		~Harl();
 
-		void	complaint(std::string level);
+		void	complain(std::string level);
 };

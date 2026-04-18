@@ -8,16 +8,16 @@
 int main(int ac, char **av)
 {
 	if (ac != 4)
-		return 1;
+		return (1);
 
 	std::string filename = av[1];
 	std::ifstream file(filename.c_str());
 	if (!file.is_open())
-		return 1;
+		return (1);
 
 	std::ofstream output((filename + ".replace").c_str());
 	if (!output.is_open())
-		return 1;
+		return (1);
 
 	std::string s1 = av[2];
 	std::string s2 = av[3];

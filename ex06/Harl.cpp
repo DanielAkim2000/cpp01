@@ -38,34 +38,44 @@ void	Harl::error(void)
 	std::cout << "This is unacceptable! I want to speak to the manager now." << std::endl;
 }
 
-void	Harl::complaint(const std::string &level)
+void	Harl::complain(const std::string &level)
 {
+	std::string	levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 	int	index;
 
-	index = -1;
-	if (level == "DEBUG")
-		index = 0;
-	else if (level == "INFO")
-		index = 1;
-	else if (level == "WARNING")
-		index = 2;
-	else if (level == "ERROR")
-		index = 3;
+	index = 0;
+	while (index < 4 && levels[index] != level)
+		index++;
 
 	switch (index)
 	{
 		case 0:
 			std::cout << "[ DEBUG ]" << std::endl;
-			debug();
+			this->debug();
+			std::cout << "[ INFO ]" << std::endl;
+			this->info();
+			std::cout << "[ WARNING ]" << std::endl;
+			this->warning();
+			std::cout << "[ ERROR ]" << std::endl;
+			this->error();
+			break;
 		case 1:
 			std::cout << "[ INFO ]" << std::endl;
-			info();
+			this->info();
+			std::cout << "[ WARNING ]" << std::endl;
+			this->warning();
+			std::cout << "[ ERROR ]" << std::endl;
+			this->error();
+			break;
 		case 2:
 			std::cout << "[ WARNING ]" << std::endl;
-			warning();
+			this->warning();
+			std::cout << "[ ERROR ]" << std::endl;
+			this->error();
+			break;
 		case 3:
 			std::cout << "[ ERROR ]" << std::endl;
-			error();
+			this->error();
 			break;
 		default:
 			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;

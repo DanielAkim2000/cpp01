@@ -9,6 +9,6 @@ int main(int argc, char **argv)
 		std::cout << "Usage: ./harlFilter \"LEVEL\"" << std::endl;
 		return (1);
 	}
-	harl.complaint(argv[1]);
+	harl.complain(argv[1]);
 	return (0);
 }

@@ -4,9 +4,9 @@ int	main(void)
 {
 	Harl	harl;
 
-	harl.complaint("DEBUG");
-	harl.complaint("WARNING");
-	harl.complaint("INFO");
-	harl.complaint("ERROR");
+	harl.complain("DEBUG");
+	harl.complain("WARNING");
+	harl.complain("INFO");
+	harl.complain("ERROR");
 	return (0);
 }
