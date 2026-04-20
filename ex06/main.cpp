@@ -2,7 +2,7 @@
 
 int main(int argc, char **argv)
 {
-	Harl	harl;
+	Harl harl;
 
 	if (argc != 2)
 	{
